@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const userInput = document.getElementById('user-input');
     const sendButton = document.getElementById('send-button');
     const inputArea = document.querySelector('.input-area');
+    sendButton.addEventListener("click", sendMessage);
+
 
     userInput.addEventListener('input', function() {
         if (userInput.value.trim() !== '') {
@@ -34,9 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
 let isSending = false;
 function changeTheme(theme) {
     const chatContainer = document.querySelector('.chat-container');
-    chatContainer.classList.remove('default', 'blue', 'green', 'pink');
+    chatContainer.classList.remove('default', 'blue', 'green', 'pink', 'sunset', 'retro', 'pastel');
     chatContainer.classList.add(theme);
 }
+
 async function sendMessage() {
     if (isSending) return;
 

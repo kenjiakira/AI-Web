@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const fs = require('fs-extra');
+const db = require('./cache/database/database'); 
 
 const app = express();
 const port = 3000;
@@ -26,7 +27,7 @@ try {
     console.error("Lỗi khi đọc file system instruction:", error);
     process.exit(1);
 }
-
+    
 const systemInstruction = systemInfo.instruction
     .replace("{aiName}", systemInfo.aiName)
     .replace("{aiAge}", systemInfo.aiAge)
@@ -61,6 +62,14 @@ app.post('/generate', async (req, res) => {
     }
 
     if (responseText) {
+        db.saveChatHistory(prompt, responseText, userStyle, (err, lastID) => {
+            if (err) {
+                console.error(`Lỗi khi lưu lịch sử trò chuyện: ${err.message}`);
+            } else {
+                console.log(`Đã lưu lịch sử trò chuyện với ID: ${lastID}`);
+            }
+        });
+
         res.json({ text: responseText });
     } else {
         res.status(500).json({ error: "Tất cả các API đều gặp lỗi." });

@@ -5,7 +5,7 @@ const { apiKeys, systemInstruction } = require('./config');
 const { log, error } = require('./util/log');
 
 const app = express();
-const port = 9999;
+const port = 8080;
 
 app.use(cors());
 app.use(express.json());
@@ -50,3 +50,23 @@ app.post('/generate', async (req, res) => {
 app.listen(port, () => {
     log(`Server đang chạy tại http://localhost:${port}`);
 });
+window.onload = function() {
+    const popup = document.getElementById("policy-popup");
+    popup.style.display = "block"; // Hiện popup khi trang tải
+}
+
+function closePopup() {
+    const popup = document.getElementById("policy-popup");
+    popup.style.display = "none"; // Ẩn popup
+}
+
+function acceptPolicy() {
+    closePopup();
+    // Lưu trạng thái đã đồng ý (có thể dùng localStorage để nhớ trạng thái)
+    localStorage.setItem('policyAccepted', 'true');
+}
+
+// Kiểm tra nếu đã đồng ý trước đó
+if (localStorage.getItem('policyAccepted') === 'true') {
+    document.getElementById("policy-popup").style.display = "none"; // Ẩn popup nếu đã đồng ý
+}

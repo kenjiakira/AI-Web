@@ -1,156 +1,224 @@
-:root {
-    --button-bg: linear-gradient(135deg, #4CAF50, #388e3c);
-    --button-hover-bg: linear-gradient(135deg, #388e3c, #4CAF50);
-    --theme-select-bg: #ffffff;
-    --theme-select-color: #000;
-}
+    :root {
+        --button-bg: linear-gradient(135deg, #4CAF50, #388e3c);
+        --button-hover-bg: linear-gradient(135deg, #388e3c, #4CAF50);
+        --theme-select-bg: #ffffff;
+        --theme-select-color: #000;
+    }
 
-.default {
-    --bg-color: rgba(255, 255, 255, 0.8);
-    --user-msg-bg: #cce5ff; 
-    --bot-msg-bg: #f1f1f1;
-    --button-bg: linear-gradient(135deg, #4CAF50, #388e3c);
-    --button-hover-bg: linear-gradient(135deg, #388e3c, #4CAF50);
-    --theme-select-bg: #ffffff;
-    --theme-select-color: #000;
-}
+    .default {
+        --bg-color: rgba(255, 255, 255, 0.8);
+        --user-msg-bg: #cce5ff; 
+        --bot-msg-bg: #f1f1f1;
+        --button-bg: linear-gradient(135deg, #4CAF50, #388e3c);
+        --button-hover-bg: linear-gradient(135deg, #388e3c, #4CAF50);
+        --theme-select-bg: #ffffff;
+        --theme-select-color: #000;
+    }
 
-.blue {
-    --bg-color: rgba(240, 248, 255, 0.8);
-    --user-msg-bg: #99cfff; 
-    --bot-msg-bg: #d0e7ff;  
-    --button-bg: linear-gradient(135deg, #007BFF, #0056b3);
-    --button-hover-bg: linear-gradient(135deg, #0056b3, #007BFF);
-    --theme-select-bg: #007BFF;
-    --theme-select-color: #fff;
-}
+    .blue {
+        --bg-color: rgba(240, 248, 255, 0.8);
+        --user-msg-bg: #99cfff; 
+        --bot-msg-bg: #d0e7ff;  
+        --button-bg: linear-gradient(135deg, #007BFF, #0056b3);
+        --button-hover-bg: linear-gradient(135deg, #0056b3, #007BFF);
+        --theme-select-bg: #007BFF;
+        --theme-select-color: #fff;
+    }
 
-.green {
-    --bg-color: rgba(240, 255, 240, 0.8);
-    --user-msg-bg: #80ff80;  
-    --bot-msg-bg: #ccffcc;   
-    --button-bg: linear-gradient(135deg, #28a745, #218838);
-    --button-hover-bg: linear-gradient(135deg, #218838, #28a745);
-    --theme-select-bg: #28a745;
-    --theme-select-color: #fff;
-}
+    .green {
+        --bg-color: rgba(240, 255, 240, 0.8);
+        --user-msg-bg: #80ff80;  
+        --bot-msg-bg: #ccffcc;   
+        --button-bg: linear-gradient(135deg, #28a745, #218838);
+        --button-hover-bg: linear-gradient(135deg, #218838, #28a745);
+        --theme-select-bg: #28a745;
+        --theme-select-color: #fff;
+    }
 
-.pink {
-    --bg-color: rgba(255, 240, 245, 0.8);
-    --user-msg-bg: #ff99bb; 
-    --bot-msg-bg: #ffe6f0;  
-    --button-bg: linear-gradient(135deg, #ff6f91, #ff3d69);
-    --button-hover-bg: linear-gradient(135deg, #ff3d69, #ff6f91);
-    --theme-select-bg: #ff6f91;
-    --theme-select-color: #fff;
-}
-
-.input-area button:hover {
-    background: var(--button-hover-bg);
-}
-
-.chat-container {
-    background-color: var(--bg-color);
-}
-
-.user-message {
-    background-color: var(--user-msg-bg);
-    color: #000; 
-}
-
-.bot-message {
-    background-color: var(--bot-msg-bg);
-    color: #000; 
-}
-
-.theme-selector {
-    display: flex;
-    align-items: center;
-    margin-bottom: -2px;
-    position: absolute;
-    top: 40px;
-    right: 50px;
+    .pink {
+        --bg-color: rgba(255, 240, 245, 0.8);
+        --user-msg-bg: #ff99bb; 
+        --bot-msg-bg: #ffe6f0;  
+        --button-bg: linear-gradient(135deg, #ff6f91, #ff3d69);
+        --button-hover-bg: linear-gradient(135deg, #ff3d69, #ff6f91);
+        --theme-select-bg: #ff6f91;
+        --theme-select-color: #fff;
+    }
+    .sunset {
+        --bg-color: rgba(255, 204, 0, 0.9);
+        --user-msg-bg: #ffcc66;
+        --bot-msg-bg: #ffe6b3;
+        --button-bg: linear-gradient(135deg, #ff9966, #ff5e62);
+        --button-hover-bg: linear-gradient(135deg, #ff5e62, #ff9966);
+        --theme-select-bg: #ff9966;
+        --theme-select-color: #fff;
+    }
     
-}
-
+    .retro {
+        --bg-color: rgba(255, 248, 220, 0.8);
+        --user-msg-bg: #e6e6e6;
+        --bot-msg-bg: #f7f7f7;
+        --button-bg: linear-gradient(135deg, #ff8c00, #ffcc00);
+        --button-hover-bg: linear-gradient(135deg, #ffcc00, #ff8c00);
+        --theme-select-bg: #ff8c00;
+        --theme-select-color: #fff;
+    }
+    
+    .pastel {
+        --bg-color: rgba(255, 240, 245, 0.8);
+        --user-msg-bg: #ffb3d1;
+        --bot-msg-bg: #ffe6f2;
+        --button-bg: linear-gradient(135deg, #ff77a3, #ff6f91);
+        --button-hover-bg: linear-gradient(135deg, #ff6f91, #ff77a3);
+        --theme-select-bg: #ff77a3;
+        --theme-select-color: #fff;
+    }
+    .header h2,
 .theme-selector label {
-    margin-right: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    color: #333;
-    font-size: 18px;
+    color: var(--header-color);
 }
+    .input-area button:hover {
+        background: var(--button-hover-bg);
+    }
+
+    .chat-container {
+        background-color: var(--bg-color);
+    }
+
+    .user-message {
+        background-color: var(--user-msg-bg);
+        color: #000; 
+    }
+
+    .bot-message {
+        background-color: var(--bot-msg-bg);
+        color: #000; 
+    }
+
+    .theme-selector {
+        display: flex;
+        align-items: center;
+        margin-bottom: -2px;
+        position: absolute;
+        top: 40px;
+        right: 50px;
+        
+    }
+
+    .theme-selector label {
+        margin-right: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        color: #333;
+        font-size: 18px;
+    }
+
+        .theme-selector select {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: var(--theme-select-bg);
+            color: var(--theme-select-color);
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-left: 5px;
+        }
+
+    .theme-selector select option {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    .theme-selector select:hover {
+        background: var(--button-hover-bg);
+    }
+
+    .theme-selector select:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    }
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .theme-selector select {
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    .theme-selector:hover {
+        transform: translateY(-2px); 
+    }
+
+    .theme-selector label {
+        margin-right: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        color: #333;
+        font-size: 18px;
+        opacity: 0; 
+        transform: translateY(-10px); 
+        animation: fadeInUp 0.3s forwards;
+    }
+    
+    @keyframes fadeInUp {
+        to {
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+    }
+    
 
     .theme-selector select {
         padding: 10px;
-        border: none;
-        border-radius: 5px;
+        border: 2px solid #ccc; 
+        border-radius: 5px; 
         background: var(--theme-select-bg);
         color: var(--theme-select-color);
         font-size: 16px;
         cursor: pointer;
-        transition: background 0.3s ease;
-        margin-left: 5px;
+        transition: background 0.3s ease, border-color 0.3s ease;
     }
 
-.theme-selector select option {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.theme-selector select:hover {
-    background: var(--button-hover-bg);
-}
-
-.theme-selector select:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
-}
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
+    .theme-selector select:hover {
+        background: var(--button-hover-bg);
+        border-color: #4CAF50; 
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .theme-selector select:focus {
+        outline: none;
+        border-color: var(--button-bg); 
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); 
     }
-}
+    @media (max-width: 480px) {
+        h2 {
+            margin-left: 10px; 
+            font-size: 18px; 
+        }
 
-.theme-selector select {
-    animation: slideDown 0.3s ease forwards;
-}
+        .theme-selector {
+            display: flex; 
+            align-items: center; 
+            margin: 5px 5px 0 0; 
+            position: relative; 
+            top:0; 
+            right: 0; 
+        }
 
-.theme-selector:hover {
-    transform: translateY(-2px); /* Đẩy lên nhẹ khi hover */
-}
+        .theme-selector label {
+            font-size: 16px; 
+            margin-right: 5px; 
+        }
 
-.theme-selector label {
-    margin-right: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    color: #333;
-    font-size: 18px;
-}
-
-.theme-selector select {
-    padding: 10px;
-    border: 2px solid #ccc; /* Đường viền màu xám */
-    border-radius: 5px; /* Bo tròn góc */
-    background: var(--theme-select-bg);
-    color: var(--theme-select-color);
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease, border-color 0.3s ease;
-}
-
-.theme-selector select:hover {
-    background: var(--button-hover-bg);
-    border-color: #4CAF50; 
-}
-
-.theme-selector select:focus {
-    outline: none;
-    border-color: var(--button-bg); 
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); 
-}
+        .theme-selector select {
+            font-size: 14px; 
+            padding: 8px; 
+        }
+    }
