@@ -52,21 +52,20 @@ app.listen(port, () => {
 });
 window.onload = function() {
     const popup = document.getElementById("policy-popup");
-    popup.style.display = "block"; // Hiện popup khi trang tải
+    popup.style.display = "block"; 
 }
 
 function closePopup() {
     const popup = document.getElementById("policy-popup");
-    popup.style.display = "none"; // Ẩn popup
+    popup.style.display = "none"; 
 }
 
 function acceptPolicy() {
     closePopup();
-    // Lưu trạng thái đã đồng ý (có thể dùng localStorage để nhớ trạng thái)
+   
     localStorage.setItem('policyAccepted', 'true');
 }
 
-// Kiểm tra nếu đã đồng ý trước đó
 if (localStorage.getItem('policyAccepted') === 'true') {
-    document.getElementById("policy-popup").style.display = "none"; // Ẩn popup nếu đã đồng ý
+    document.getElementById("policy-popup").style.display = "none"
 }

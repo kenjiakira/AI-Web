@@ -79,3 +79,4 @@ app.post('/generate', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server đang chạy tại http://localhost:${port}`);
 });
+module.exports = app;
