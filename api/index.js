@@ -5,8 +5,6 @@ const fs = require('fs-extra');
 const db = require('./cache/database/database'); 
 
 const app = express();
-const port = 3000;
-
 app.use(cors());
 app.use(express.json());
 
@@ -46,6 +44,7 @@ const generateContentWithAPI = async (apiKey, fullPrompt) => {
     }
 };
 
+
 app.post('/generate', async (req, res) => {
     const { prompt, userStyle, conversationHistory } = req.body;
 
@@ -76,7 +75,5 @@ app.post('/generate', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server đang chạy tại http://localhost:${port}`);
-});
+
 module.exports = app;
