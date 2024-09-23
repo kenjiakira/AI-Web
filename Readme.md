@@ -86,7 +86,7 @@ AI Chat App là một ứng dụng trò chuyện với trí tuệ nhân tạo (A
     * `Modesystem.js`: Xử lý logic liên quan đến hệ thống chuyển đổi chế độ.
 * `index.html`: Tệp HTML chính của ứng dụng.
 * `package.json` và `package-lock.json`: Quản lý các dependencies của dự án.
-* `server.js`: Mã JavaScript phía máy chủ để xử lý các yêu cầu từ client và giao tiếp với API của chatbot AI.
+* `main.js`: Mã JavaScript phía máy chủ để xử lý các yêu cầu từ client và giao tiếp với API của chatbot AI.
 
 ## Công nghệ sử dụng
 
