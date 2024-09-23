@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trò chuyện với AI - Ứng dụng chat thông minh.">
+    <title>Trò chuyện với AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+    <link rel="stylesheet" href="Css/style.css"> 
+    <link rel="stylesheet" href="Css/theme.css">
+</head>
+<body>
+    <div class="parallax-background"></div>
+    <div class="chat-container">
+        <div class="header">
+            <h2>Chat với AI</h2>
+            <div class="theme-selector">
+                <label for="theme-select">
+                    <i class="fas fa-paint-brush"></i> Chọn chủ đề:
+                </label>                
+                <select id="theme" onchange="changeTheme(this.value)">
+                    <option value="default">🌈 Mặc định</option>
+                    <option value="blue">💙 Xanh</option>
+                    <option value="green">💚 Xanh lá</option>
+                    <option value="pink">💖 Hồng</option>
+                </select>
+            </div>
+        </div>  
+        <div class="chat-box" id="chat-box" aria-live="polite">
+           
+            <div class="particles"></div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Nhập tin nhắn..." aria-required="true" role="textbox" aria-label="Nhập tin nhắn">
+            <button id="send-button" class="send-button" aria-label="Gửi tin nhắn" role="button" style="display: none;">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>          
+    </div>
+
+<script src="client.js"></script>
+<script src="server.js"></script>
+<script src="main.js"></script>
+<script src="config.js"></script>
+<script src="button/send.js"></script>
+<script src="Js/Hammer.js"></script>
+<script src="button/typingEffec.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+</body>
+</html>

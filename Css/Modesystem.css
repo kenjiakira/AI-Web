@@ -1,0 +1,54 @@
+:root {
+    --background-color: #f5f7fa;
+    --text-color: #000;
+    --container-background: #fff;
+    --chatbox-background: #f9f9f9;
+    --message-background-user: #d1e7ff;
+    --message-background-bot: #e2e2e2;
+
+    --night-background-color: #333;
+    --night-text-color: #fff;
+    --night-container-background: #444;
+    --night-chatbox-background: #222;
+    --night-message-background: #555;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.chat-container {
+    background-color: var(--container-background);
+    transition: background-color 0.3s ease;
+}
+
+.chat-box {
+    background-color: var(--chatbox-background);
+    transition: background-color 0.3s ease;
+}
+
+.message {
+    background-color: var(--message-background-bot);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Chế độ ban đêm */
+body.night-mode {
+    background: var(--night-background-color);
+    color: var(--night-text-color);
+}
+
+.chat-container.night-mode {
+    background-color: var(--night-container-background);
+}
+
+.chat-box.night-mode {
+    background-color: var(--night-chatbox-background);
+}
+
+.message.night-mode {
+    background-color: var(--night-message-background);
+    color: var(--night-text-color);
+}
