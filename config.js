@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 
 let apiKeys;
 try {
-    const data = fs.readFileSync('ApiKey/api.json');
+    const data = fs.readFileSync('apiKey/api.json');
     apiKeys = JSON.parse(data).API_KEYS;
 } catch (error) {
     console.error("Lỗi khi đọc file API keys:", error);

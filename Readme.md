@@ -1,4 +1,16 @@
+Dưới đây là phần JSON được sửa lại cho rõ ràng hơn và dễ đọc hơn:
 
+```json
+{
+    "API_KEYS": [
+        "1234567890-!@#$%^&*()"
+    ]
+}
+```
+
+### Phần README.md đã sửa
+
+```markdown
 # AI Chat App
 
 ## Giới thiệu
@@ -38,11 +50,12 @@ AI Chat App là một ứng dụng trò chuyện với trí tuệ nhân tạo (A
 3. **Cấu hình API Key:**
    * Tạo một tệp `ApiKey.json` trong thư mục gốc của dự án.
    * Thêm API key của bạn vào tệp này:
-     ```javascript
-{
-    "API_KEYS": [ "1234567890-!@#$%^&*()"
-    ]
-}
+     ```json
+     {
+         "API_KEYS": [
+             "1234567890-!@#$%^&*()"
+         ]
+     }
      ```
 
 4. **Chạy server:**
@@ -95,17 +108,15 @@ Mọi đóng góp đều được chào đón! Nếu bạn muốn đóng góp v�
 
 ## Liên hệ
 
-Nếu bạn có bất kỳ câu hỏi hoặc góp ý, vui lòng liên hệ với chúng tôi qua email: kenjiakira2006@gamil.com.
+Nếu bạn có bất kỳ câu hỏi hoặc góp ý, vui lòng liên hệ với chúng tôi qua email: kenjiakira2006@gmail.com.
 
 ## Giấy phép
 
 Dự án này được cấp phép theo giấy phép MIT. Xem tệp `LICENSE` để biết thêm chi tiết.
-```
+
+---
 
 **Lưu ý:**
-
-* Hãy thay thế `<URL repository của bạn>` và `'YOUR_API_KEY_HERE'` bằng thông tin thực tế của dự án bạn.
-* Cập nhật phần "Công nghệ sử dụng" nếu bạn có sử dụng thêm các thư viện hoặc framework khác.
-* Bổ sung thêm các phần khác nếu cần thiết, ví dụ như "Các vấn đề đã biết" hoặc "Roadmap phát triển".
-
-**Chúc bạn thành công với dự án AI Chat App của mình!** 
+- Hãy thay thế `<URL repository của bạn>` bằng thông tin thực tế của dự án bạn.
+- Cập nhật phần "Công nghệ sử dụng" nếu bạn có sử dụng thêm các thư viện hoặc framework khác.
+- Bổ sung thêm các phần khác nếu cần thiết, ví dụ như "Các vấn đề đã biết" hoặc "Roadmap phát triển".

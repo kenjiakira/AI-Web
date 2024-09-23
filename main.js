@@ -3,8 +3,9 @@ const cors = require('cors');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { apiKeys, systemInstruction } = require('./config');
 const { log, error } = require('./util/log');
+
 const app = express();
-const port = 3000;
+const port = 9999;
 
 app.use(cors());
 app.use(express.json());
