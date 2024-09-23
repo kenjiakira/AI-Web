@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const fs = require('fs-extra');
-const db = require('./cache/database/database'); 
+const db = require('../cache/database/database'); 
 
 const app = express();
 app.use(cors());
