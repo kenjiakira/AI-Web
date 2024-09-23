@@ -1,11 +1,9 @@
 {
   "name": "ai-chat-app",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "api/index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "start": "node api/index.js"
   },
   "keywords": [],
   "author": "",
@@ -20,8 +18,6 @@
     "fs-extra": "^11.2.0",
     "moment-timezone": "^0.5.45",
     "mongoose": "^8.6.3",
-    "server": "^1.0.39",
-    "server.js": "^1.0.0",
     "sqlite3": "^5.1.7",
     "winston": "^3.14.2"
   }
