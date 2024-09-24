@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "api/index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "start": "node api/index.js",
+    "build": "echo 'No build step required'"
   },
   "dependencies": {
     "@google/generative-ai": "^0.19.0",
