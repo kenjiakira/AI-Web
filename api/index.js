@@ -4,6 +4,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const fs = require('fs-extra');
 const db = require('../cache/database/database'); 
 
+const port = 3000;
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -74,6 +75,8 @@ app.post('/generate', async (req, res) => {
         res.status(500).json({ error: "Tất cả các API đều gặp lỗi." });
     }
 });
-
+app.listen(port, () => {
+    console.log(`Server đang chạy tại http://localhost:${port}`);
+});
 
 module.exports = app;
