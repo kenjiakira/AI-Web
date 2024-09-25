@@ -1,0 +1,126 @@
+.message {
+    max-width: 70%;
+    word-wrap: break-word;
+    margin-bottom: 12px;
+    line-height: 24px;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+.message:before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 20px;
+    width: 20px;
+}
+
+.user-message {
+    color: white;
+    background: #0B93F6;
+    align-self: flex-end;
+}
+
+.user-message:before {
+    right: -7px;
+    border-bottom-left-radius: 16px 14px;
+    transform: translate(0, -2px);
+    background: #0B93F6;
+}
+
+.user-message:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: -56px;
+    width: 26px;
+    height: 20px;
+    background: white;
+    border-bottom-left-radius: 10px;
+    transform: translate(-30px, -2px);
+}
+
+.bot-message {
+    background: #E5E5EA;
+    color: black;
+    align-self: flex-start;
+}
+
+.bot-message:before {
+    left: -7px;
+    border-bottom-right-radius: 16px 14px;
+    transform: translate(0, -2px);
+    background: #E5E5EA;
+}
+
+.bot-message:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 4px;
+    width: 26px;
+    height: 20px;
+    background: white;
+    border-bottom-right-radius: 10px;
+    transform: translate(-30px, -2px);
+}
+
+.timestamp {
+    font-size: 0.75rem;
+    color: #a0aec0;
+    margin-top: 5px;
+}
+
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.typing-indicator span {
+    height: 10px;
+    width: 10px;
+    float: left;
+    margin: 0 1px;
+    background-color: #9E9EA1;
+    display: block;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.typing-indicator span:nth-of-type(1) {
+    animation: 1s blink infinite 0.3333s;
+}
+
+.typing-indicator span:nth-of-type(2) {
+    animation: 1s blink infinite 0.6666s;
+}
+
+.typing-indicator span:nth-of-type(3) {
+    animation: 1s blink infinite 0.9999s;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+}
+
+.theme-light { background-color: #f3f4f6; color: #1f2937; }
+.theme-dark { background-color: #1f2937; color: #f3f4f6; }
+.theme-blue { background-color: #dbeafe; color: #1e3a8a; }
+.theme-green { background-color: #d1fae5; color: #064e3b; }
+.theme-pink { background-color: #fce7f3; color: #831843; }
+.theme-sunset { background-color: #ffedd5; color: #7c2d12; }
+.theme-retro { background-color: #fef3c7; color: #78350f; }
+.theme-pastel { background-color: #f3e8ff; color: #581c87; }
+
+.fade-in {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

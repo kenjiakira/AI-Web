@@ -1,0 +1,27 @@
+RewriteEngine On
+
+Files .env
+    Order allow,deny
+    Deny from all
+Files
+
+
+#Xử lý Route ADMIN
+
+RewriteRule ^adminmenu-edit([A-Za-z0-9-]+) index.phpmodule=admin&action=menu-edit&id=$1 [L]
+RewriteRule ^admincategory-edit([A-Za-z0-9-]+) index.phpmodule=admin&action=category-edit&id=$1 [L]
+RewriteRule ^adminpost-edit([A-Za-z0-9-]+) index.phpmodule=admin&action=post-edit&id=$1 [L]
+RewriteRule ^adminuser-edit([A-Za-z0-9-]+) index.phpmodule=admin&action=user-edit&id=$1 [L]
+RewriteRule ^admin([A-Za-z0-9-]+) index.phpmodule=admin&action=$1 [L]
+RewriteRule ^admin index.phpmodule=admin&action= [L]
+
+#Xử lý Route CLIENT
+RewriteRule ^clientcategory([A-Za-z0-9-]+) index.phpmodule=client&action=category&slug=$1 [L]
+RewriteRule ^clientpost([A-Za-z0-9-]+) index.phpmodule=client&action=post&slug=$1 [L]
+RewriteRule ^client([A-Za-z0-9-]+) index.phpmodule=client&action=$1 [L]
+RewriteRule ^client index.phpmodule=client&action= [L]
+
+
+
+#Xử lý Route COMMON
+RewriteRule ^common([A-Za-z0-9-]+) index.phpmodule=common&action=$1 [L]

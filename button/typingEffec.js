@@ -1,17 +1,11 @@
 function simulateTyping(text, delay, callback) {
     const chatBox = document.getElementById("chat-box");
-    
+
     const newMessage = document.createElement("div");
     newMessage.classList.add('message', 'bot-message');
     chatBox.appendChild(newMessage);
 
-    const typingIndicator = document.createElement("span");
-    typingIndicator.classList.add('typing-indicator');
-    typingIndicator.innerText = "Đang gõ..."; 
-    chatBox.appendChild(typingIndicator);
-
     let index = 0;
-
     const typingInterval = setInterval(() => {
         if (index < text.length) {
             newMessage.innerText = text.slice(0, index + 1);
@@ -19,7 +13,6 @@ function simulateTyping(text, delay, callback) {
             index++;
         } else {
             clearInterval(typingInterval);
-            chatBox.removeChild(typingIndicator); 
             if (callback) callback();
         }
     }, delay);
@@ -33,8 +26,17 @@ async function sendMessage() {
     conversationHistory.push(`User: ${userInput}`);
     document.getElementById("user-input").value = "";
 
-    const words = userInput.split(" ");
-    userStyles.push(...words);
+    const chatBox = document.getElementById("chat-box");
+    const typingIndicator = document.createElement("span");
+    typingIndicator.classList.add('typing-indicator');
+    typingIndicator.innerText = "Đang gõ...";
+
+    const loadingCircle = document.createElement("div");
+    loadingCircle.classList.add('loading-circle');
+    typingIndicator.appendChild(loadingCircle);
+
+    chatBox.appendChild(typingIndicator);
+    chatBox.scrollTop = chatBox.scrollHeight; 
 
     const response = await fetch('http://localhost:3000/generate', {
         method: 'POST',
@@ -49,6 +51,9 @@ async function sendMessage() {
     });
 
     const data = await response.json();
+
+    chatBox.removeChild(typingIndicator);
+
     if (data.text) {
         simulateTyping(data.text, 50, () => {
             conversationHistory.push(`Bot: ${data.text}`);
