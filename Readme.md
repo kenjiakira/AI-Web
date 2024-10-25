@@ -1,11 +1,4 @@
-Thay API KEY của Gemini Api để sử dụng:
-```json
-{
-    "API_KEYS": [
-        "1234567890-!@#$%^&*()"
-    ]
-}
-```
+
 
 # AI Chat App
 
