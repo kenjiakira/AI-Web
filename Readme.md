@@ -5,6 +5,7 @@ Thay API KEY của Gemini Api để sử dụng:
         "1234567890-!@#$%^&*()"
     ]
 }
+```
 
 # AI Chat App
 
