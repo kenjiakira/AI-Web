@@ -1,14 +1,10 @@
-Dưới đây là phần JSON được sửa lại cho rõ ràng hơn và dễ đọc hơn:
-
+Thay API KEY của Gemini Api để sử dụng:
 ```json
 {
     "API_KEYS": [
         "1234567890-!@#$%^&*()"
     ]
 }
-```
-
-### Phần README.md đã sửa
 
 ```markdown
 # AI Chat App
