@@ -6,7 +6,6 @@ Thay API KEY của Gemini Api để sử dụng:
     ]
 }
 
-```markdown
 # AI Chat App
 
 ## Giới thiệu
